@@ -1,10 +1,11 @@
 
-import {BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn} from 'typeorm'
+import {BaseEntity, Column, Entity, PrimaryGeneratedColumn} from 'typeorm'
 
-@Entity('city')
+
+@Entity()
 export class City extends BaseEntity {
     @PrimaryGeneratedColumn()
-    id : string
+    id : number
 
     @Column()
     name : string

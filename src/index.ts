@@ -1,13 +1,11 @@
-import express from 'express'
+import express  from 'express'
 import cors from 'cors'
+
 import {createConnection} from 'typeorm'
 
 import cityRoute from './routes/city.route'
 
 const app = express()
-
-
-
 
 
 
