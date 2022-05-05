@@ -5,7 +5,6 @@ import { createClient } from 'redis'
 
 const client = createClient()
 
-
 client.connect()
 
 const router = Router()
