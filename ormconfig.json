@@ -1,0 +1,16 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "mysqlroot",
+    "password": "huylgvgsholding2001",
+    "database": "crud_stuff",
+    "synchronize": true,
+    "logging": true,
+    "entities": ["src/entities/**/*.ts"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entities"
+    }
+  }
