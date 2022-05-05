@@ -7,7 +7,6 @@ const router = Router()
 
 router.post('/city/create',async(req : Request,res : Response) => {
 
-    console.log(req.body)
     const city = City.create(req.body)
 
     await city.save()
@@ -21,9 +20,7 @@ router.post('/city/create',async(req : Request,res : Response) => {
 
 router.get('/city',async(req : Request,res : Response) => {
 
-    
     const cities = await City.find()
-
 
    return res.send({
        status : 200,
@@ -34,7 +31,6 @@ router.get('/city',async(req : Request,res : Response) => {
 
 router.put('/city/update/:id',async(req : Request,res : Response) => {
 
-    
     const city = await City.findOneBy({
         id : req.params.id
     })
@@ -42,8 +38,8 @@ router.put('/city/update/:id',async(req : Request,res : Response) => {
     city!.name = req.body.name 
     city!.population = req.body.population
 
-
     await city!.save()
+
    return res.send({
        status : 200,
    })
