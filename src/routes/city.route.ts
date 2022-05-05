@@ -34,7 +34,7 @@ router.get('/city',async(req : Request,res : Response) => {
 
    return res.json({
        status : 200,
-       cities : cities
+       cities
    })
 
 })
@@ -65,7 +65,6 @@ router.delete('/city/delete/:id',async(req : Request,res : Response) => {
 
    return res.send({
        status : 200,
-      
    })
 
 })
